@@ -1,0 +1,3 @@
+Welcome to Linux.
+I hope you enjoy Commands.
+It is super important for you to practice linux before getting into DevOps.

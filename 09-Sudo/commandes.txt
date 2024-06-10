@@ -1,0 +1,82 @@
+[vagrant@centos ~]$ whoami
+vagrant
+[vagrant@centos ~]$ sudo yum install git -y
+Last metadata expiration check: 1:53:42 ago on Tue 04 Jun 2024 06:30:38 PM UTC.
+Package git-2.43.0-1.el9.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[vagrant@centos ~]$ yum install git -y
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[vagrant@centos ~]$ useradd test
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+[vagrant@centos ~]$ sudo useradd test
+[vagrant@centos ~]$ sudo -i
+[root@centos ~]# su - ansible
+[ansible@centos ~]$ exit
+logout
+[root@centos ~]# passwd ansible
+Changing password for user ansible.
+## Sudoers allows particular users to run various commands as
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+ 91 ## which machines (the sudoers file can be shared between multiple
+passwd: all authentication tokens updated successfully.
+[root@centos ~]# su - ansible
+Last login: Tue Jun  4 20:25:36 UTC 2024 on pts/3
+[ansible@centos ~]$ sudo useradd test12
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+## Next comes the main part: which users can run what software on
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for ansible:
+ansible is not in the sudoers file.  This incident will be reported.
+[ansible@centos ~]$ sudo -i
+[sudo] password for ansible:
+ansible is not in the sudoers file.  This incident will be reported.
+[ansible@centos ~]$ exit
+logout
+[root@centos ~]# visudo
+## Next comes the main part: which users can run what software on
+[root@centos ~]# ls -l /etc/sudoers
+-r--r-----. 1 root root 4328 Jun  4 20:28 /etc/sudoers
+[root@centos ~]# visudo
+[root@centos ~]# su - ansible
+Last login: Tue Jun  4 20:26:07 UTC 2024 on pts/3
+[ansible@centos ~]$ sudo -i
+[sudo] password for ansible:
+%devops ALL=(ALL) NOPASSWD: ALL
+[root@centos ~]# exit
+logout
+[ansible@centos ~]$ exit
+logout
+[root@centos ~]# visudo
+[root@centos ~]# su - ansible
+Last login: Tue Jun  4 20:30:49 UTC 2024 on pts/3
+[ansible@centos ~]$ sudo -i
+[root@centos ~]# exit
+logout
+[ansible@centos ~]$ sudo useradd test12
+[ansible@centos ~]$ exit
+logout
+[root@centos ~]# ls -l /etc/sudoers
+-r--r-----. 1 root root 4365 Jun  4 20:31 /etc/sudoers
+[root@centos ~]# visudo
+[root@centos ~]# cd /etc/sudoers.d/
+[root@centos sudoers.d]# ls
+vagrant
+[root@centos sudoers.d]# cat vagrant
+%vagrant ALL=(ALL) NOPASSWD: ALL
+[root@centos sudoers.d]# cp vagrant devops
+[root@centos sudoers.d]# vim devops
+[root@centos sudoers.d]# cat *
+%devops ALL=(ALL) NOPASSWD: ALL
+%vagrant ALL=(ALL) NOPASSWD: ALL
+[root@centos sudoers.d]#

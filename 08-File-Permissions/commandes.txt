@@ -1,0 +1,127 @@
+[root@centos ~]# ls -l
+# Liste les fichiers et répertoires dans le répertoire actuel avec des détails (permissions, propriétaire, taille, etc.).
+
+[root@centos ~]# mkdir /opt/devopsdir
+# Crée un nouveau répertoire nommé "devopsdir" dans "/opt".
+
+[root@centos ~]# ls -l /opt/
+# Liste les fichiers et répertoires dans "/opt" avec des détails.
+
+[root@centos ~]# groupadd devops
+# Crée un nouveau groupe nommé "devops".
+
+[root@centos ~]# useradd ansible
+# Crée un nouvel utilisateur nommé "ansible".
+
+[root@centos ~]# useradd jenkins
+# Crée un nouvel utilisateur nommé "jenkins".
+
+[root@centos ~]# useradd aws
+# Crée un nouvel utilisateur nommé "aws".
+
+[root@centos ~]# useradd miles
+# Crée un nouvel utilisateur nommé "miles".
+
+[root@centos ~]# vim /etc/group
+# Ouvre le fichier "/etc/group" dans l'éditeur Vim pour modifier les groupes.
+
+[root@centos ~]# id ansible
+# Affiche les informations sur l'utilisateur "ansible" (UID, GID, et groupes).
+
+[root@centos ~]# ls -ld /opt/devopsdir
+# Affiche les détails du répertoire "/opt/devopsdir" lui-même (pas son contenu).
+
+[root@centos ~]# chown -R ansible:devops /opt/devopsdir
+# Change récursivement le propriétaire et le groupe du répertoire "/opt/devopsdir" en "ansible" et "devops".
+
+[root@centos ~]# ls -ld /opt/devopsdir
+# Affiche les détails du répertoire "/opt/devopsdir" après le changement de propriétaire et de groupe.
+
+[root@centos ~]# chmod o-x /opt/devopsdir
+# Retire les permissions d'exécution pour les autres utilisateurs sur le répertoire "/opt/devopsdir".
+
+[root@centos ~]# ls -ld /opt/devopsdir
+# Affiche les détails du répertoire "/opt/devopsdir" après la modification des permissions.
+
+[root@centos ~]# chmod o-r /opt/devopsdir
+# Retire les permissions de lecture pour les autres utilisateurs sur le répertoire "/opt/devopsdir".
+
+[root@centos ~]# ls -ld /opt/devopsdir
+# Affiche les détails du répertoire "/opt/devopsdir" après la modification des permissions.
+
+[root@centos ~]# chmod g+w /opt/devopsdir
+# Ajoute les permissions d'écriture pour le groupe sur le répertoire "/opt/devopsdir".
+
+[root@centos ~]# ls -ld /opt/devopsdir
+# Affiche les détails du répertoire "/opt/devopsdir" après la modification des permissions.
+
+[root@centos ~]# su - miles
+# Change l'utilisateur courant en "miles" et ouvre une nouvelle session.
+
+[miles@centos ~]$ ls /opt/devopsdir
+# Liste les fichiers dans le répertoire "/opt/devopsdir".
+
+[miles@centos ~]$ cd /opt/devopsdir
+# Change le répertoire de travail vers "/opt/devopsdir".
+
+[miles@centos ~]$ touch /opt/devopsdir/test1
+# Crée un fichier vide nommé "test1" dans "/opt/devopsdir".
+
+[miles@centos ~]$ su - aws
+# Change l'utilisateur courant en "aws" et ouvre une nouvelle session.
+
+[miles@centos ~]$ exit
+# Quitte la session actuelle et retourne à l'utilisateur précédent.
+
+[root@centos ~]# su - aws
+# Change l'utilisateur courant en "aws" et ouvre une nouvelle session.
+
+[aws@centos ~]$ id
+# Affiche les informations sur l'utilisateur "aws" (UID, GID, et groupes).
+
+[aws@centos ~]$ ls /opt/devopsdir/
+# Liste les fichiers dans le répertoire "/opt/devopsdir".
+
+[aws@centos ~]$ cd /opt/devopsdir/
+# Change le répertoire de travail vers "/opt/devopsdir".
+
+[aws@centos devopsdir]$ touch awsfiles
+# Crée un fichier vide nommé "awsfiles" dans "/opt/devopsdir".
+
+[aws@centos devopsdir]$ ls
+# Liste les fichiers dans le répertoire "/opt/devopsdir".
+
+[aws@centos devopsdir]$ cd ..
+# Remonte d'un niveau dans l'arborescence des répertoires.
+
+[aws@centos opt]$ ls -l
+# Liste les fichiers et répertoires dans "/opt" avec des détails.
+
+[aws@centos opt]$ exit
+# Quitte la session actuelle et retourne à l'utilisateur précédent.
+
+[root@centos ~]# mkdir /opt/webdata
+# Crée un nouveau répertoire nommé "webdata" dans "/opt".
+
+[root@centos ~]# ls -ld /opt/webdata
+# Affiche les détails du répertoire "/opt/webdata" lui-même.
+
+[root@centos ~]# chown aws.devops /opt/webdata
+# Change le propriétaire et le groupe du répertoire "/opt/webdata" en "aws" et "devops".
+
+[root@centos ~]# ls -ld /opt/webdata
+# Affiche les détails du répertoire "/opt/webdata" après le changement de propriétaire et de groupe.
+
+[root@centos ~]# chmod -R 770 /opt/webdata
+# Change récursivement les permissions du répertoire "/opt/webdata" pour que le propriétaire et le groupe aient toutes les permissions, et que les autres n'en aient aucune.
+
+[root@centos ~]# ls -ld /opt/webdata
+# Affiche les détails du répertoire "/opt/webdata" après la modification des permissions.
+
+[root@centos ~]# chmod -R 754 /opt/webdata
+# Change récursivement les permissions du répertoire "/opt/webdata" pour que le propriétaire ait toutes les permissions, le groupe ait les permissions de lecture et d'exécution, et que les autres aient seulement la permission de lecture.
+
+[root@centos ~]# ls -ld /opt/webdata
+# Affiche les détails du répertoire "/opt/webdata" après la modification des permissions.
+
+

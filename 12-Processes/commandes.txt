@@ -1,0 +1,26 @@
+[root@centos ~]# top
+
+[root@centos ~]# ps aux
+
+[root@centos ~]# ps -ef
+
+[root@centos ~]# ps -ef | grep httpd
+
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+
+[root@centos ~]# kill 3649
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+[root@centos ~]# systemctl start httpd
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+
+[root@centos ~]# kill -9 3861
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep' | awk '{ print $2 }'
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep' | awk '{ print $2 }' | xargs kill -9
+
+[root@centos ~]# systemctl start httpd
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep' | awk '{ print $2 }'
+
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep' | awk '{ print $2 }' | xargs kill -9
+[root@centos ~]# top

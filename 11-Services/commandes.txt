@@ -1,0 +1,42 @@
+[root@centos ~]# yum install httpd -y
+
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl start httpd
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl restart httpd
+[root@centos ~]# systemctl reload httpd
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# exit
+
+[vagrant@centos ~]$ sudo reboot
+[vagrant@centos ~]$ Connection to 127.0.0.1 closed by remote host.
+
+
+$ vagrant ssh
+
+[vagrant@centos ~]$ sudo -i
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl enable httpd
+
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl status sshd
+
+
+[root@centos ~]# systemctl is-active httpd
+
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl start httpd
+[root@centos ~]# systemctl status httpd
+
+[root@centos ~]# systemctl is-active httpd
+
+[root@centos ~]# systemctl is-enabled httpd
+
+[root@centos ~]# cat /etc/systemd/system/multi-user.target.wants/httpd.service
+

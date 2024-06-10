@@ -1,0 +1,25 @@
+[vagrant@pc-151 ~]$ whoami
+
+[vagrant@pc-151 ~]$ cat /etc/os-release
+
+[vagrant@pc-151 ~]$ sudo yum install vim -y
+
+[vagrant@pc-151 ~]$ ls
+[vagrant@pc-151 ~]$ pwd
+
+[vagrant@pc-151 ~]$ vim firstfile.txt
+[vagrant@pc-151 ~]$ cat firstfile.txt
+
+[vagrant@pc-151 ~]$ vim firstfile.txt
+[vagrant@pc-151 ~]$ cat firstfile.txt
+
+[vagrant@pc-151 ~]$ sudo -i
+[root@pc-151 ~]# pwd
+
+[root@pc-151 ~]# ls
+[root@pc-151 ~]# cat anaconda-ks.cfg
+
+
+[root@pc-151 ~]# ls
+[root@pc-151 ~]# vim anaconda-ks.cfg
+[root@pc-151 ~]#

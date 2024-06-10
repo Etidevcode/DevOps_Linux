@@ -1,0 +1,183 @@
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire actuel.
+
+[vagrant@pc-151 ~]$ pwd
+# Affiche le chemin complet (chemin absolu) du répertoire de travail actuel.
+
+[vagrant@pc-151 ~]$ mkdir dev
+# Crée un nouveau répertoire nommé "dev".
+
+[vagrant@pc-151 ~]$ mkdir ops bakupdir
+# Crée deux nouveaux répertoires nommés "ops" et "bakupdir".
+
+[vagrant@pc-151 ~]$ ls
+# Liste à nouveau les fichiers et répertoires dans le répertoire actuel, maintenant inclut "dev", "ops" et "bakupdir".
+
+[vagrant@pc-151 ~]$ pwd
+# Affiche le chemin complet du répertoire de travail actuel.
+
+[vagrant@pc-151 ~]$ touch testfile1.txt
+# Crée un fichier vide nommé "testfile1.txt".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire actuel, incluant maintenant "testfile1.txt".
+
+[vagrant@pc-151 ~]$ touch devopsfile{1..10}.txt
+# Crée dix fichiers vides nommés "devopsfile1.txt" à "devopsfile10.txt".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire actuel, incluant les nouveaux fichiers "devopsfile1.txt" à "devopsfile10.txt".
+
+[vagrant@pc-151 ~]$ cp devopsfile1.txt dev/
+# Copie "devopsfile1.txt" dans le répertoire "dev".
+
+[vagrant@pc-151 ~]$ ls dev/
+# Liste les fichiers dans le répertoire "dev", doit afficher "devopsfile1.txt".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire actuel.
+
+[vagrant@pc-151 ~]$ cd /tmp/
+# Change le répertoire de travail vers "/tmp".
+
+[vagrant@pc-151 tmp]$ ls
+# Liste les fichiers et répertoires dans "/tmp".
+
+[vagrant@pc-151 tmp]$ ls /home/vagrant/dev/
+# Liste les fichiers dans "/home/vagrant/dev", doit afficher "devopsfile1.txt".
+
+[vagrant@pc-151 tmp]$ cd
+# Retourne au répertoire personnel de l'utilisateur ("/home/vagrant").
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ pwd
+# Affiche le chemin complet du répertoire de travail actuel.
+
+[vagrant@pc-151 ~]$ cd /tmp/
+# Change le répertoire de travail vers "/tmp".
+
+[vagrant@pc-151 tmp]$ cp /home/vagrant/devopsfile2.txt /home/vagrant/dev/
+# Copie "devopsfile2.txt" dans le répertoire "dev".
+
+[vagrant@pc-151 tmp]$ cd ~
+# Retourne au répertoire personnel de l'utilisateur.
+
+[vagrant@pc-151 ~]$ pwd
+# Affiche le chemin complet du répertoire de travail actuel.
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ ls bakupdir/
+# Liste les fichiers dans le répertoire "bakupdir".
+
+[vagrant@pc-151 ~]$ ls /home/vagrant/bakupdir/
+# Liste les fichiers dans "/home/vagrant/bakupdir".
+
+[vagrant@pc-151 ~]$ cp -r dev bakupdir/
+# Copie le répertoire "dev" et tout son contenu dans "bakupdir".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ ls bakupdir/
+# Liste les fichiers dans le répertoire "bakupdir", doit afficher "dev".
+
+[vagrant@pc-151 ~]$ ls /home/vagrant/bakupdir/
+# Liste les fichiers dans "/home/vagrant/bakupdir", doit afficher "dev".
+
+[vagrant@pc-151 ~]$ cp --help
+# Affiche l'aide pour la commande "cp".
+
+[vagrant@pc-151 ~]$ pwd
+# Affiche le chemin complet du répertoire de travail actuel.
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ mv devopsfile3.txt ops/
+# Déplace "devopsfile3.txt" dans le répertoire "ops".
+
+[vagrant@pc-151 ~]$ ls ops/
+# Liste les fichiers dans le répertoire "ops", doit afficher "devopsfile3.txt".
+
+[vagrant@pc-151 ~]$ mv ops dev/
+# Déplace le répertoire "ops" dans "dev".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ ls dev/
+# Liste les fichiers dans le répertoire "dev", doit afficher "devopsfile1.txt", "devopsfile2.txt" et "ops".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ mv testfile1.txt testfile22.txt
+# Renomme "testfile1.txt" en "testfile22.txt".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel, doit afficher "testfile22.txt".
+
+[vagrant@pc-151 ~]$ mkdir textdir
+# Crée un répertoire nommé "textdir".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel, doit afficher "textdir".
+
+[vagrant@pc-151 ~]$ mv *.txt textdir/
+# Déplace tous les fichiers ".txt" dans le répertoire "textdir".
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel, "testfile22.txt" ne devrait plus être listé.
+
+[vagrant@pc-151 ~]$ cd textdir/
+# Change le répertoire de travail vers "textdir".
+
+[vagrant@pc-151 textdir]$ ls
+# Liste les fichiers et répertoires dans "textdir", doit afficher les fichiers ".txt" déplacés.
+
+[vagrant@pc-151 textdir]$ rm devopsfile10.txt
+# Supprime "devopsfile10.txt".
+
+[vagrant@pc-151 textdir]$ mkdir mobile
+# Crée un répertoire nommé "mobile".
+
+[vagrant@pc-151 textdir]$ ls
+# Liste les fichiers et répertoires dans "textdir", doit afficher "mobile".
+
+[vagrant@pc-151 textdir]$ rm -r mobile
+# Supprime le répertoire "mobile" et tout son contenu.
+
+[vagrant@pc-151 textdir]$ ls
+# Liste les fichiers et répertoires dans "textdir".
+
+[vagrant@pc-151 textdir]$ mkdir testdir{1..5}
+# Crée cinq répertoires nommés "testdir1" à "testdir5".
+
+[vagrant@pc-151 textdir]$ ls
+# Liste les fichiers et répertoires dans "textdir", doit afficher "testdir1" à "testdir5".
+
+[vagrant@pc-151 textdir]$ rm -rf *
+# Supprime récursivement et de manière forcée tous les fichiers et répertoires dans "textdir".
+
+[vagrant@pc-151 textdir]$ ls
+# Liste les fichiers et répertoires dans "textdir", qui devrait maintenant être vide.
+
+[vagrant@pc-151 textdir]$ pwd
+# Affiche le chemin complet du répertoire de travail actuel.
+
+[vagrant@pc-151 textdir]$ cd
+# Retourne au répertoire personnel de l'utilisateur.
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ rm -rf *
+# Supprime récursivement et de manière forcée tous les fichiers et répertoires dans le répertoire personnel.
+
+[vagrant@pc-151 ~]$ ls
+# Liste les fichiers et répertoires dans le répertoire personnel, qui devrait maintenant être vide.
+

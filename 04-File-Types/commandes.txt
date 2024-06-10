@@ -1,0 +1,72 @@
+[root@pc-151 ~]# pwd
+
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# mkdir devopsdir
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# file anaconda-ks.cfg
+
+[root@pc-151 ~]# file devopsdir
+
+[root@pc-151 ~]# cd /bin/
+[root@pc-151 bin]# ls -l
+
+[root@pc-151 bin]# file yum
+
+[root@pc-151 bin]# file /bin/pwd
+
+[root@pc-151 bin]# cd
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# file devopsdir
+
+[root@pc-151 ~]# cd /dev/
+[root@pc-151 dev]# ls -l
+
+[root@pc-151 dev]# pwd
+
+[root@pc-151 dev]# ls
+
+[root@pc-151 dev]# cd
+[root@pc-151 ~]# pwd
+[root@pc-151 ~]# ls
+
+[root@pc-151 ~]# mkdir -p /opt/dev/ops/devops/test
+[root@pc-151 ~]# mkdir -p /opt/dev/ops/devops/test
+[root@pc-151 ~]# mkdir  /opt/dev/ops/devops/test
+mkdir: cannot create directory ‘/opt/dev/ops/devops/test’: File exists
+
+[root@pc-151 ~]# vim /opt/dev/ops/devops/test/commands.txt
+[root@pc-151 ~]# ln -s /opt/dev/ops/devops/test/commands.txt cmds
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# cat cmds
+
+[root@pc-151 ~]# mv /opt/dev/ops/devops/test/commands.txt /tmp/
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# mv /tmp/commands.txt /opt/dev/ops/devops/test/commands.txt
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# unlink cmds
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# ln -s /opt/dev/ops/devops/test/commands.txt cmds
+[root@pc-151 ~]# ls -l
+
+[root@pc-151 ~]# ls -lt
+
+[root@pc-151 ~]# ls -ltr
+
+[root@pc-151 ~]# ls -ltr /etc/
+
+[root@pc-151 ~]# vim /etc/hostname
+[root@pc-151 ~]# hostname centos.devops.in
+[root@pc-151 ~]# logout
+[vagrant@pc-151 ~]$ logout
+
+
+$ vagrant ssh
+[vagrant@centos ~]$ hostname
+[vagrant@centos ~]$ ls -ltr /etc/

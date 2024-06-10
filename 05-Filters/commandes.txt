@@ -1,0 +1,81 @@
+[root@centos ~]# ls
+
+[root@centos ~]# grep firewall anaconda-ks.cfg
+
+[root@centos ~]# grep Firewall anaconda-ks.cfg
+[root@centos ~]# grep -i Firewall anaconda-ks.cfg
+[root@centos ~]# vim anaconda-ks.cfg
+[root@centos ~]# grep -i firewall anaconda-ks.cfg
+
+[root@centos ~]# grep -i firewall < anaconda-ks.cfg
+
+[root@centos ~]# grep -i firewall ls
+
+[root@centos ~]# ls
+
+[root@centos ~]# grep -i firewall *
+
+[root@centos ~]# grep -iR firewall *
+
+[root@centos ~]# cp anaconda-ks.cfg devopsdir/mybootingfile.cfg
+[root@centos ~]# grep -iR firewall *
+
+[root@centos ~]# grep -R SELINUX /etc/*
+
+[root@centos ~]# vim /etc/selinux/config
+[root@centos ~]# grep -vi firewall anaconda-ks.cfg
+
+[root@centos ~]# less anaconda-ks.cfg
+[root@centos ~]# more anaconda-ks.cfg
+
+[root@centos ~]# head anaconda-ks.cfg
+
+[root@centos ~]# head -20 anaconda-ks.cfg
+
+%addon com_redhat_kdump --disable
+
+[root@centos ~]# head -2 anaconda-ks.cfg
+
+[root@centos ~]# tail anaconda-ks.cfg
+
+[root@centos ~]# tail -2 anaconda-ks.cfg
+
+[root@centos ~]# tail -f anaconda-ks.cfg
+
+[root@centos ~]# cd /var/log/
+[root@centos log]# ls
+
+
+[root@centos log]# ls
+
+[root@centos log]# cat messages
+
+[root@centos log]# tail -f /var/log/messages
+
+[root@centos log]# cd
+
+[root@centos ~]# cat /etc/passwd
+
+[root@centos ~]# cut -d: -f1 /etc/passwd
+
+[root@centos ~]# awk -F':' '{print $1}' /etc/passwd
+
+[root@centos ~]# vim samplefile.txt
+[root@centos ~]# cat samplefile.txt
+
+[root@centos ~]# vim samplefile.txt
+[root@centos ~]# cat samplefile.txt
+
+[root@centos ~]# sed 's/coronavirus/covid19/g' samplefile.txt
+
+[root@centos ~]# cat samplefile.txt
+
+[root@centos ~]# sed -i 's/coronavirus/covid19/g' samplefile.txt
+[root@centos ~]# cat samplefile.txt
+
+[root@centos ~]# sed -i 's/covid19/nothing/g' samplefile.txt
+[root@centos ~]# cat samplefile.txt
+
+
+
+

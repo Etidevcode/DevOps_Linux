@@ -1,0 +1,73 @@
+
+$ ls
+
+$ vagrant global-status
+
+$ vagrant up
+
+$ vagrant ssh
+
+vagrant@ubuntu-jammy:~$ cat /etc/os-release
+
+vagrant@ubuntu-jammy:~$ sudo -i
+root@ubuntu-jammy:~# whoami
+
+root@ubuntu-jammy:~# pwd
+
+root@ubuntu-jammy:~# useradd devops
+root@ubuntu-jammy:~# su - devops
+
+root@ubuntu-jammy:~# userdel -r devops
+
+root@ubuntu-jammy:~# adduser devops
+
+root@ubuntu-jammy:~# id devops
+
+root@ubuntu-jammy:~# visudo
+
+root@ubuntu-jammy:~# export EDITOR=vim
+root@ubuntu-jammy:~# visudo
+
+root@ubuntu-jammy:~# tree
+
+root@ubuntu-jammy:~# wget http://archive.ubuntu.com/ubuntu/pool/universe/t/tree/tree_1.7.0-3_amd64.deb
+
+root@ubuntu-jammy:~# ls
+
+root@ubuntu-jammy:~# dpkg -i tree_1.7.0-3_amd64.deb
+
+root@ubuntu-jammy:~# tree
+
+root@ubuntu-jammy:~# dpkg -l
+
+root@ubuntu-jammy:~# dpkg -l | grep tree
+
+root@ubuntu-jammy:~# dpkg -r tree
+
+root@ubuntu-jammy:~# cd /etc/apt/
+root@ubuntu-jammy:/etc/apt# ls
+
+root@ubuntu-jammy:/etc/apt# cat sources.list
+
+root@ubuntu-jammy:/etc/apt# apt update
+
+root@ubuntu-jammy:/etc/apt# cd
+root@ubuntu-jammy:~# apt search tree
+
+
+root@ubuntu-jammy:~# apt install tree
+
+root@ubuntu-jammy:~# apt install apache2
+
+root@ubuntu-jammy:~# systemctl status apache2
+
+root@ubuntu-jammy:~# systemctl is-enabled apache2
+
+root@ubuntu-jammy:~# apt upgrade
+
+root@ubuntu-jammy:~# apt remove apache2
+
+root@ubuntu-jammy:~# apt install apache2
+
+root@ubuntu-jammy:~# apt purge apache2
+

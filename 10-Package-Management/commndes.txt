@@ -1,0 +1,35 @@
+[root@centos ~]# tree /var/log
+[root@centos ~]# curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm -o tree-1.6.0-10.el7.x86_64.rpm
+[root@centos ~]# ls
+[root@centos ~]# rpm -ivh tree-1.6.0-10.el7.x86_64.rpm
+[root@centos ~]# tree /var/log/
+[root@centos ~]# curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/httpd-2.4.6-95.el7.centos.x86_64.rpm -o httpd-2.4.6-95.el7.centos.x86_64.rpm
+[root@centos ~]# ls
+[root@centos ~]# rpm -ivh httpd-2.4.6-95.el7.centos.x86_64.rpm
+[root@centos ~]# rpm --help
+[root@centos ~]# rpm -qa
+[root@centos ~]# rpm -qa | grep tree
+
+[root@centos ~]# rpm -e tree-1.6.0-10.el7.x86_64
+[root@centos ~]# rpm -qa | grep tree
+[root@centos ~]# tree
+
+[root@centos ~]# cd /etc/yum.repos.d/
+[root@centos yum.repos.d]# ls
+[root@centos yum.repos.d]# cat CentOS-Base.repo
+[root@centos yum.repos.d]# yum search httpd
+[root@centos yum.repos.d]# cd
+[root@centos ~]# yum install httpd
+[root@centos ~]# yum remove httpd
+[root@centos ~]# yum install httpd
+[root@centos ~]# yum search nginx
+[root@centos ~]# yum install nginx
+[root@centos ~]# yum install jenkins
+[root@centos ~]# ls /etc/yum.repos.d/
+[root@centos ~]# yum install wget -y
+[root@centos ~]# sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+[root@centos ~]# cat /etc/yum.repos.d/jenkins.repo
+[root@centos ~]# rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+[root@centos ~]# yum install jenkins java-1.8.0-openjdk-devel -y
+[root@centos ~]# yum upgrade

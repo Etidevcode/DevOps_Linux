@@ -1,0 +1,76 @@
+[root@centos ~]# whoami
+
+[root@centos ~]# cat /etc/passwd
+
+[root@centos ~]# head -1 /etc/passwd
+
+[root@centos ~]# grep vagrant /etc/passwd
+
+[root@centos ~]# grep vagrant /etc/passwd
+
+[root@centos ~]# cat /etc/passwd
+
+[root@centos ~]# cat /etc/group
+
+[root@centos ~]# grep vagrant /etc/passwd
+
+[root@centos ~]# grep vagrant /etc/group
+
+[root@centos ~]# id vagrant
+
+[root@centos ~]# useradd ansible
+[root@centos ~]# useradd jenkins
+[root@centos ~]# useradd aws
+[root@centos ~]# tail -4 /etc/passwd
+
+[root@centos ~]# tail -4 /etc/group
+
+[root@centos ~]# id ansible
+[root@centos ~]# groupadd devops
+[root@centos ~]# usermod -aG devops ansible
+[root@centos ~]# id ansible
+
+[root@centos ~]# grep devops /etc/group
+
+[root@centos ~]# vim /etc/group
+[root@centos ~]# id aws
+
+[root@centos ~]# passwd ansible
+
+[root@centos ~]# passwd aws
+
+[root@centos ~]# passwd jenkins
+
+
+[root@centos ~]# su - ansible
+[ansible@centos ~]$ whoami
+
+[ansible@centos ~]$ pwd
+
+[ansible@centos ~]$ su - aws
+
+[aws@centos ~]$ su - jenkins
+
+[jenkins@centos ~]$ exit
+
+[aws@centos ~]$ exit
+
+[ansible@centos ~]$ exit
+
+[root@centos ~]# last
+
+[root@centos ~]# who
+
+[root@centos ~]# lsof -u vagrant
+
+[root@centos ~]# userdel aws
+[root@centos ~]# ls /home/
+
+[root@centos ~]# userdel -r jenkins
+[root@centos ~]# ls /home/
+
+[root@centos ~]# groupdel devops
+[root@centos ~]# userdel -r ansible
+[root@centos ~]# ls /home/
+
+[root@centos ~]# rm -rf /home/aws

@@ -1,0 +1,97 @@
+[root@centos ~]# uptime
+
+[root@centos ~]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+
+[root@centos ~]# uptime
+
+[root@centos ~]# uptime > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+
+[root@centos ~]# ls
+
+[root@centos ~]# ls > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+
+[root@centos ~]# uptime >> /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+
+[root@centos ~]# uptime
+
+[root@centos ~]# free -m
+
+[root@centos ~]# df -h
+
+[root@centos ~]# echo "Good Morining"
+[root@centos ~]# echo "##########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# date > /tmp/sysinfo.txt
+[root@centos ~]# echo "##########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# uptime >> /tmp/sysinfo.txt
+[root@centos ~]# echo "##########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# free -m >> /tmp/sysinfo.txt
+[root@centos ~]# echo "##########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# df -h >> /tmp/sysinfo.txt
+[root@centos ~]# echo "##########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+
+[root@centos ~]# yum install vim -y > /dev/null
+[root@centos ~]# cat /dev/null
+[root@centos ~]# cat /tmp/sysinfo.txt
+
+[root@centos ~]# cat /dev/null > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+[root@centos ~]# free -m > /dev/null
+[root@centos ~]# freeeee -m > /dev/null
+
+[root@centos ~]# freeeee -m 2>> /tmp//error.log
+[root@centos ~]# cat /tmp/error.log
+
+[root@centos ~]# freeeee -m 1>> /tmp//error.log
+
+[root@centos ~]# free -m 1>> /tmp//error.log
+[root@centos ~]# cat /tmp/error.log
+
+[root@centos ~]# free -m &>> /tmp//error.log
+[root@centos ~]# freesdsd -m &>> /tmp//error.log
+[root@centos ~]# cat /tmp/error.log
+
+[root@centos ~]# cd /var/log/
+[root@centos log]# ls
+
+[root@centos log]# cd
+
+[root@centos ~]# wc -l /etc/passwd
+
+[root@centos ~]# wc -l < /etc/passwd
+
+[root@centos ~]# cd /etc/
+[root@centos etc]# ls
+
+[root@centos etc]# ls | wc -l
+
+[root@centos etc]# ls | grep host*
+[root@centos etc]# ls | grep host
+
+[root@centos etc]# tail /var/log/messages | grep -i vagrant
+[root@centos etc]# tail -20 /var/log/messages | grep -i vagrant
+
+[root@centos etc]# free -m
+
+[root@centos etc]# free -m | grep Mem
+
+[root@centos etc]# ls -l | tail
+
+[root@centos etc]# ls -l | head
+
+[root@centos etc]# cd
+[root@centos ~]# find /etc -name host*
+
+[root@centos ~]# find / -name host*
+
+/usr/libexec/hostname
+[root@centos ~]# locate
+
+[root@centos ~]# yum install mlocate -y
+
+[root@centos ~]# updatedb
+[root@centos ~]# locate host
